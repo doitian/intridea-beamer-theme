@@ -1,0 +1,48 @@
+\usetheme{default}
+\useoutertheme{default}
+\useinnertheme{circles}
+\usefonttheme{professionalfonts}
+
+%%% For xelatex on Mac
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\setmainfont{Gill Sans}
+\setmonofont[Scale=0.86]{Andale Mono}
+
+%%% For pdflatex
+%% \renewcommand\sfdefault{phv}
+%% \renewcommand\familydefault{\sfdefault}
+%% \usepackage{texnansi}
+%% \usepackage{marvosym}
+
+\setbeamerfont{title}{size={\fontsize{48}{52}}}
+\setbeamerfont{frametitle}{size=\huge}
+\setbeamerfont{copyright in head/foot}{size=\Tiny}
+\setbeamerfont{framenumber in head/foot}{size=\Tiny}
+
+\setbeamertemplate{background canvas}{\includegraphics
+	[width=\paperwidth,height=\paperheight]{background.png}}
+\setbeamertemplate{frametitle}[default][center]
+\setbeamertemplate{navigation symbols}{} %no nav symbols
+
+\usepackage{color}
+\usecolortheme[RGB={34,139,34}]{structure}
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{copyright in head/foot}{fg=gray}
+\setbeamercolor{framenumber in head/foot}{fg=gray}
+
+\defbeamertemplate*{footline}{infolines theme}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=2ex,center]{copyright in head/foot}%
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=2ex,center]{copyright in head/foot}%
+    \usebeamerfont{copyright in head/foot}Copyright \the\year, \insertinstitute All Rights Reserved.
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=2ex,right]{framenumber in head/foot}%
+    \usebeamerfont{framenumber in head/foot}\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
